@@ -1,0 +1,706 @@
+/* Default code starts here */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-wrap: pretty;
+    /* border: 1px solid red; */
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f8f2f4;
+    font-family: "Roboto Condesend", sans-serif;
+    font-optical-sizing: auto;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0rem;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    text-wrap: balance;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+:root {
+    --primarycolor: #ffffff;
+    --secondarycolor: #660600;
+    --darkcolor: #330300;
+    --lightcolor: #ff0f00;
+    --regularFont: 1.4rem;
+    --headingFont: 2rem;
+    --ffprimary: "Roboto Condensed", sans-serif;
+    --ffecondary: "Merienda", cursive;
+}
+.align {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 3rem;
+}
+.componentspacing {
+    padding: 3rem 0;
+}
+.minipad {
+    padding: 1rem;
+}
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.dflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dflex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dflex-col-start {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+}
+.dflex-between{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    text-align: start;
+}
+/* :::PARENT CONTAINER code starts here::: */
+
+header {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+/* :::PARENT CONTAINER code Ends here::: */
+.navcontainer{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    margin-bottom: 0rem;
+}
+.navcontainer.sticky{
+    background-color: white;
+}
+.navbar{
+    padding: 1rem;
+}
+.nav-logo img{
+    width: 20%; 
+}
+.nav-logo{
+    /* background-color: #ff0f00; */
+    display: flex;
+    justify-content: center;
+    padding-right: 11rem;
+    align-items: center;
+    text-align: center;
+}
+.nav-item {
+    padding-top: 2rem;
+    list-style-type: none;
+}
+.nav-item a {
+    font-family: "Inter Tight", sans-serif;
+    padding: 1rem;
+    margin-left: 0.4rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+}
+.button-box{
+    padding-left: 8rem;
+}
+.button-box button {
+    padding: 1.6rem;
+    font-family: "Inter Tight", sans-serif;
+    background-color: #f8f2f4;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(7, 7, 190, 0.856);
+    border: 0.30rem solid rgba(7, 7, 190, 0.856);
+}
+.accordioncontent{
+    display: none;
+}
+.herosection {
+    padding: 7rem 8rem 45rem 5rem;
+    background-image: url(./assests/images/HRO.jfif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-top: 0rem;
+}
+.heroimage img {
+    /* margin-top: 2rem; */
+    height: 200;
+    aspect-ratio: 16/9;
+}
+.heroimage h1 {
+    font-family: "Blinker", sans-serif;
+    font-size: 8rem;
+    font-weight: bold;
+    color: #f8f2f4;
+    line-height: 6rem;
+    padding-bottom: 1rem;
+}
+.heroimage h3 {
+    font-family: "Blinker", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #f8f2f4;
+}
+.heroimage h2 {
+    font-family: "Blinker", sans-serif;
+    font-size: 8rem;
+    font-weight: bold;
+    color: #f8f2f4;
+    line-height: 6rem;
+}
+.companycontainer {
+    background-color: #000000;
+    margin-top: 10rem;
+}
+.companybody {
+    padding: 0.7rem 0rem;
+}
+
+.image {
+    padding: 4.5rem;
+}
+.image img {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.platformcontainer {
+    margin-top: 10rem;
+    /* background-color: #f8f2f4; */
+}
+.platforms h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    color: rgb(141, 141, 143);
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+.platforms h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #000000;
+    font-size: 3.7rem;
+    padding-bottom: 2rem;
+}
+.platforms p {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 450;
+    padding-bottom: 5rem;
+    line-height: 2.5rem;
+}
+.managementbody {
+    gap: 3.5rem;
+}
+.management h3 {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 1.7rem;
+    padding-top: 2rem;
+    font-weight: 500;
+}
+.management p {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 450;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    line-height: 2.5rem;
+}
+.management a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: blue;
+}
+.future1 h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: rgb(141, 141, 143);
+    font-weight: 400;
+    padding-bottom: 2rem;
+    background-color: white;
+    width: 120%;
+    z-index: 20;
+}
+.future1{
+    background-color: white;
+}
+.futurecontainer {
+    /* background-color: #f8f2f4; */
+    margin-top: 10rem;
+}
+.future1 h2 {
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+    background-color: white;
+    width: 120%;
+    z-index: 20;
+    font-weight: 250;
+}
+.future1 p {
+    background-color: white;
+    font-size: 1.7rem;
+    width: 120%;
+    z-index: 20;
+}
+.future p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    color: rgb(66, 92, 92);
+    line-height: 3.2rem;
+    font-weight: 480;
+}
+.casecontainer {
+    /* background-color: #f8f2f4; */
+    margin-top: 10rem;
+}
+.case1 h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.jobsbody {
+    gap: 4rem;
+    padding-right: 2rem;
+}
+.image5 img{
+    aspect-ratio: 4/2;
+    border-radius: 5px;
+}
+.jobs h3 {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 1.6rem;
+    padding-top: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+.future2 h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+.future2 h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    color: rgb(141, 141, 143);
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+.embarcecontainer {
+    margin-top: 10rem;
+}
+input {
+    border: none;
+    border-bottom: 2px solid rgb(179, 212, 214);
+}
+.formgroup1 h5 {
+    font-family: "Lato", sans-serif;
+    color: rgb(132, 132, 150);
+    font-size: 1.2rem;
+}
+.paragraph p{
+    font-family: "Montserrat", sans-serif;
+    color: #93999e;
+    font-size: 6rem;
+}
+.paragraph a{
+    font-family: "Montserrat", sans-serif;
+}
+.formgroup2 label {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    color: rgb(54, 59, 59);
+    font-weight: 500;
+    padding-top: 2rem;
+}
+.formgroup2 input {
+    margin-top: 2rem;
+    padding: 1rem 1rem 1rem 6rem;
+}
+.formgroup3 label {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    color: rgb(54, 59, 59);
+    font-weight: 500;
+    padding-top: 2rem;
+}
+.formgroup3 input {
+    margin-top: 2rem;
+    padding: 1rem 6rem 1rem 0rem;
+}
+.formgroup1 label {
+    font-family: "Lato", sans-serif;
+    font-size: 1.4rem;
+    color: rgb(54, 59, 59);
+    font-weight: 500;
+    padding-top: 2rem;
+}
+::placeholder{
+    font-size: 1.4rem;
+}
+
+.formgroup1 input {
+    margin-top: 5rem;
+    padding: 1rem 38rem 1rem 1rem;
+}
+.check input {
+    margin-top: 2rem;
+}
+.table2 {
+    margin-top: 3rem;
+}
+.contactcontainer {
+    background-color: #000000;
+    margin-top: 10rem;
+}
+.formgroup label {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    color: rgb(54, 59, 59);
+    font-weight: 500;
+    padding-top: 2rem;
+}
+.contactsbody p {
+    font-size: 1.3rem;
+    font-family: "Lato", sans-serif;
+    padding-top: 1rem;
+    color: #302525;
+    font-weight: 500;
+}
+.contactsbody button {
+    padding: 1rem 3rem 1rem 2rem;
+    background-color: rgb(29, 29, 226);
+    border: blue;
+    color: #f8f2f4;
+    font-weight: bold;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    border-radius: 5px;
+}
+.disclaimer{
+    display: flex;
+    align-content: center;
+}
+.disclaimer h4 {
+    font-family: "Inter Tight", sans-serif;
+    align-content: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #f8f2f4;
+}
+
+.disclaimer i{
+    color: #ffffff;
+    font-size: 1.5rem;
+    align-content: center;
+}
+.icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    text-align: end;
+    list-style-type: none;
+    padding-left: 30rem;
+}
+.icons i {
+    padding: 1rem;
+    font-size: 2.5rem;
+    color: #f8f2f4;
+}
+.tabel2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tabel1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* :::HEADER Code Ends here::: */
+/* Navbar code */
+/* Navbar code */
+
+/* Hero Section code */
+/* Hero Section code */
+/* :::HEADER code Ends here::: */
+
+
+/*:::MAIN Code Starts here::: */
+/* Our Menu code */
+/* Our Menu code */
+
+/* Facility code */
+/* Facility code */
+
+/* Popular code */
+/* Popular code */
+
+/* Gallery code */
+/* Gallery code */
+
+/* Team code */
+/* Team code */
+/* :::MAIN Code Ends here::: */
+
+
+/* :::Footer Code Starts here::: */
+/* Contact code */
+/* Contact code */
+
+/* Contact Icons code */
+/* Contact Icons code */
+/* :::FOOTER Code Ends here::: */
+
+/* :::::RESPONSIVE DESIGN DEVICE SIZES ::::: */
+
+/* for Responsive Target the row code (display:grid) */
+
+/* Small devices (landscape phones, upto 576px and below) */
+@media(width <=576px) {
+
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .companybody {
+        padding: 1rem 0rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    .navcontainer{
+        display: none;
+    }
+
+    .platformsbody {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .managementbody {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .embarcebody {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .future1 p {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .heroimage h3 {
+        font-size: 1.7rem;
+    }
+    .heroimage h1 {
+        font-size: 2.8rem;
+        line-height: 2.7rem;          
+        
+    }
+    .heroimage h2{
+        font-size: 2.8rem;
+        line-height: 0.5rem;  
+
+    }
+    .platforms h2 {
+        font-size: 2.5rem;
+    }
+
+    .platforms p {          
+        line-height: 3rem;
+    }
+
+    .management h3 {
+        font-size: 1.6rem;
+    }
+
+    .management p {
+        line-height: 3rem;
+    }
+
+    .future1 h2 {
+        font-size: 2.5rem;
+    }
+
+    .future2 h2 {
+        font-size: 2.5rem;
+    }
+    .tabel1 {
+        display: flex;
+        flex-direction: column;
+        align-items:start;
+        justify-content:center;
+    }
+    .tabel2{
+        display: flex;
+        flex-direction: column;
+        align-items:start;
+        justify-content:center;
+    }
+    .formgroup2 input {
+        padding: 1rem 17rem 1rem 0rem;
+    
+    }
+    .formgroup3 input {
+        padding: 1rem 17rem 1rem 0rem;
+    
+    }
+    .formgroup1 input {
+        padding: 1rem 17rem 1rem 0rem;
+    
+    }
+    .formgroup2 label {
+        font-size: 1.5rem;   
+    }
+    .formgroup3 label {
+        font-size: 1.5rem;   
+    }
+    .formgroup1 label {
+        font-size: 1.5rem;   
+    }
+    .formgroup1 p {
+        font-size: 1.6rem;   
+    }
+    .paragraph p{
+        line-height: 3rem;
+    }
+    .icons{
+        padding: 0 19rem 0 0rem;
+        margin-top: 1rem;
+    } 
+    
+    
+    
+    
+
+}
+
+/* Medium devices (tablets, upto 768px and above) */
+@media (width >=577px) and (width <=768px) {}
+
+
+/* Large devices (Laptops, upto 992px and above) */
+@media (width >=769px) and (width <=992px) {}
+
+
+/* X-Large devices (large desktops, upto 1200px and above) */
+@media (width >=993px) and (width <=1200px) {}
+
+/* XX-Large devices (larges desktops, upto 1400px and above) */
+@media (width >=1200px) {}
